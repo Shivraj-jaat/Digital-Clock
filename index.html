@@ -1,19 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
 </head>
+
 <body>
-    <div class="container">
-    <div class="hour-cont"><span id="time-h" class="time"></span>  <div class="text"> HOURS </div></div>
-    <div class="minute-cont"><span id="time-m" class="time"></span>  <div class="text"> Minutes</div></div>
-    <div class="second-cont"><span id="time-s" class="time"></span> <div class="text">SECONDS</div></div>
-    <!-- <span class="am-pm" >AM</span> -->
+    <div id="parent">
+        <h1 id="main-header">⏱️ Digital Clock</h1>
+        <div id="time-div">
+            <div id="hour"></div>
+            <span class="col">:</span>
+            <div id="minute"></div>
+            <span class="col">:</span>
+            <div id="second"></div>
+        </div>
+
+
+        <div id="time-indicator"></div>
+
+        <div id="day-date">📅
+            <span id="day"></span>
+            <span id="date"></span>
+            <span id="month"></span>
+            <span id="year">2026</span>
+
+        </div>
+
+        <div id="mode-format">
+            <div id="dark-mode">
+                <div>🌑 Mode: </div>
+                <button id="mode-btn">Light </button>
+            </div>
+
+            <span class="separator">|</span>
+
+            <div id="time-format">
+                <div>⌛ Format: </div>
+                <button id="format-btn">12 hr</button>
+            </div>
+
+
+        </div>
+
+
     </div>
 
-    <script src="./script.js"></script>r
+
+    <script src="./index.js"></script>
 </body>
+
 </html>

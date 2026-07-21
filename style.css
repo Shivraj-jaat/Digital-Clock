@@ -1,71 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-image: url(bg.avif);
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0px;
-    padding: 0px;
-}
-
-.container {
+    min-height: 100vh;
     display: flex;
-    height: 140px;
-    width: 500px;
-    margin: 200px auto;
-    gap: 10px;
-
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg,
+            #020817 0%,
+            #0e205b 50%,
+            #020817 100%);
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 20px;
 }
 
-.hour-cont {
-    width: 130px;
-    color: white;
+#parent {
+    width: min(92vw, 720px);
+    min-height: 80vh;
+    box-shadow: 0px 0px 8px 1px rgba(201, 197, 210, 0.35);
+    background: linear-gradient(135deg,
+            #020817 0%,
+            #0e205b 50%,
+            #020817 100%);
+    padding: 24px 20px;
+    border-radius: 16px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    background-color:rgb(250, 250, 240, 0.3);
-
+    justify-content: center;
+    gap: 20px;
 }
 
-.minute-cont {
-    width: 130px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(245, 245, 245, 0.3);
-}
-
-.second-cont {
-    width: 130px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(243, 230, 250, 0.3);
-}
-
-.am-pm{
-    color: white;
-    display: flex;
-    align-items: end;
-    font-size: 20px;
-    height: 40px;
-    margin-top: 100px;
-   
-}
-
-.time {
-    margin-top: 30px;
-    font-size: 50px;
-
-}
-
-.text{
-    background-color: gray;
-    width: 100%;
+#main-header {
+    font-size: 40px;
     text-align: center;
-    height: 30px;
-    padding-top: 10px;
+}
+
+#time-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#hour,
+#minute,
+#second {
+    min-width: 54px;
+    text-align: center;
+    font-size: 60px;
+    color: rgb(61, 152, 243);
+}
+
+.col {
+    font-size: 50px;
+    line-height: 1;
+}
+
+#time-indicator {
+    font-size: 30px;
+    color: blue;
+    text-align: center;
+}
+
+#day-date {
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+}
+
+#mode-format {
+    width: min(100%, 500px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+#dark-mode,
+#time-format {
+    box-shadow: 0px 0px 5px 2px rgb(35, 35, 148);
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.separator {
+    font-size: 24px;
+    font-weight: 200;
+    color: rgb(133, 133, 163);
+}
+
+button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(45, 45, 213);
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: blue;
+}
+
+#parent.mode {
+    background: white !important;
+    color: black;
+}
+
+#parent.mode button {
+    color: black;
+    background-color: goldenrod;
+}
+
+#parent.mode button:hover {
+    background-color: orange;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    #parent {
+        width: 100%;
+        min-height: auto;
+        padding: 20px 14px;
+        gap: 16px;
+    }
+
+    #mode-format {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #dark-mode,
+    #time-format {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .separator {
+        display: none;
+    }
 }
